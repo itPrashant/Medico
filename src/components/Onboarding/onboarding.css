@@ -1,0 +1,39 @@
+.onboard-wrap{
+  width:100vw;
+  height:100vh;
+  overflow:hidden;
+  position:relative;
+  background: var(--background-light);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+}
+
+.onboard-slide{
+  width:100%;
+  height:100%;
+  touch-action: pan-y;
+}
+
+.dots{
+  position: absolute;
+  bottom: 26px;
+  display:flex;
+  gap:10px;
+}
+
+.dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  border:none;
+  /* background: #fff; */
+  background: #00c951;
+}
+
+.dot.active{
+  width:28px;
+  border-radius:12px;
+  /* background: linear-gradient(90deg, rgba(45,190,96,1), rgba(30,200,120,1)); */
+}

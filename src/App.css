@@ -1,0 +1,52 @@
+:root {
+  --primary-color: #1dbf73; /* your green */
+  --primary-dark: #17a864;
+  --text-light: #ffffff;
+  --background-light: #f8f9fa;
+}
+
+.splash-container {
+  background: var(--primary-color);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  color: var(--text-light);
+}
+
+.splash-content {
+  text-align: center;
+  z-index: 10;
+}
+
+.splash-logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+.splash-title {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.splash-subtitle {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.splash-pattern {
+  position: absolute;
+  bottom: -40px;
+  left: -20px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 8px solid rgba(255, 255, 255, 0.2);
+  transform: rotate(30deg);
+}

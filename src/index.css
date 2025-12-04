@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+.slick-dots li{
+    margin: 0px 12px!important;
+
+}
+
+/* .slick-dots li.slick-active button:before {
+    background: black;
+    width: 20px;
+    height: 10px;
+    border-radius: 10px;
+} */
+
+/* .d-listcard h2,.d-listcard p, .d-listcard span{
+    font-family: poppins;
+} */
+.slick-dots li{
+    width: 0;
+    height: 0;
+}
+.slick-dots li button{
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background: green;
+}
+.slick-dots li.slick-active button{
+    background: green;
+    height: 6px;
+    width: 20px;
+    border-radius: 5px;
+}
+
+.slick-dots li button:before {
+    font-size: 0px;
+    width: 0px;
+    height: 0px;
+}
