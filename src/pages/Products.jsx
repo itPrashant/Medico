@@ -55,7 +55,7 @@ const Products = () => {
           <FiArrowLeft size={22} />
         </Link>
 
-        <h1 className="text-lg font-semibold">Pharmacy</h1>
+        <h1 className="text-lg font-semibold">Categories</h1>
 
         <div className="h-10 w-10 rounded-full bg-white shadow flex items-center justify-center">
           <FiBell size={22} />

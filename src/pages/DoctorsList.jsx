@@ -5,7 +5,7 @@ import { IoIosStar } from "react-icons/io";
 import BottomNav from "./Home/BottomNav";
 import hedoc from "../assets/hedoc.jpg";
 import shedoc from "../assets/shedoc.png";
-
+import { useNavigate } from "react-router-dom";
 const doctors = [
   {
     id: 1,
@@ -410,6 +410,7 @@ const doctors = [
   },
 ];
 
+
 const DoctorsList = () => {
   const [search, setSearch] = useState("");
 
@@ -424,7 +425,7 @@ const DoctorsList = () => {
       doc.state.toLowerCase().includes(q)
     );
   });
-
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-[#f7faff] px-4 pt-6 pb-24">
       {/* Header */}
@@ -501,7 +502,10 @@ const DoctorsList = () => {
                 <div className="flex items-center gap-1 text-xs font-semibold text-gray-600">
                   <span>₹ {doc.price} - Consulting fees</span>
                 </div>
-                <button className="px-3 py-2 bg-green-500 text-white text-xs font-medium rounded-full shadow">
+                <button className="px-3 py-2 bg-green-500 text-white text-xs font-medium rounded-full shadow"
+                onClick={() =>
+                  navigate("/book-appointment", { state: { doctor: doc } })
+                }>
                   Book Clinic Visit
                 </button>
               </div>

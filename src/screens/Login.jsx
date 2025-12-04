@@ -32,7 +32,7 @@ export default function Login() {
 
         <label className="text-gray-700 font-medium text-sm">Password*</label>
         <div className="input-wrap">
-          <input type="password" placeholder="••••••••" />
+          <input type="password" placeholder="••••••••" className="text-sm font-medium text-gray-700"/>
         </div>
 
         <div className="forgot text-sm text-blue-600 font-medium">Forgot Password?</div>
