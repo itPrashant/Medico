@@ -5,7 +5,7 @@ import google from "../assets/icons/google.png";
 import facebook from "../assets/icons/facebook.png";  
 import twitter from "../assets/icons/twitter.png"; 
 import logo from "../assets/log-g.png";  
-
+import { FiArrowLeft } from "react-icons/fi";
 
 
 
@@ -14,8 +14,8 @@ export default function Login() {
   return (
     <div className="login-screen">
       <div className="top-bar">
-        <button className="back" onClick={() => nav(-1)}>
-          ←
+        <button className="back flex items-center justify-center" onClick={() => nav(-1)}>
+          <FiArrowLeft size={22} />  
         </button>
       </div>
 

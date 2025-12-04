@@ -431,8 +431,8 @@ const DoctorsList = () => {
       {/* Header */}
       <div className="flex items-center justify-between">
         <Link
-          to="/"
-          className="h-10 w-10 rounded-full bg-white shadow flex items-center justify-center"
+          to="/Home"
+          className="h-10 w-10 bg-white rounded-xl shadow flex items-center justify-center"
         >
           <FiArrowLeft size={22} />
         </Link>
