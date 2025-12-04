@@ -6,6 +6,9 @@
     margin: 0px 12px!important;
 
 }
+input {
+  font-size: 16px !important;
+}
 
 /* .slick-dots li.slick-active button:before {
     background: black;

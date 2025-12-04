@@ -17,13 +17,9 @@ export default function SearchBar() {
         </svg>
 
         <input
-          className="flex-1 text-xs outline-none"
+          className="flex-1 text-[16px] outline-none"
           placeholder="Search Medicines, Doctors etc..."
         />
-
-        {/* <button className="ml-2 bg-primary text-white px-2 py-1 rounded-lg text-sm shadow">
-          🎤
-        </button> */}
       </div>
 
       <button className="w-11 h-11 bg-white rounded-xl shadow flex items-center justify-center">
