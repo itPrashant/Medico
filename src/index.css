@@ -42,3 +42,18 @@ input {
     width: 0px;
     height: 0px;
 }
+@media(min-width: 380px) {
+  .illustration img{
+   height: 300px;
+   
+  }
+  .illustration{
+    align-items: center;
+  }
+  .welcome-image img{
+    height: 345px;
+  }
+  .welcome-image{
+    align-items: center;
+  }
+}

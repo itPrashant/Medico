@@ -13,6 +13,7 @@
   right:20px;
   border:none;
   cursor:pointer;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.15);
 }
 
 .top{
