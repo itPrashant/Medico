@@ -3,7 +3,8 @@ import "../styles/login.css";
 import { Navigate, useNavigate } from "react-router-dom";
 import google from "../assets/icons/google.png";  
 import facebook from "../assets/icons/facebook.png";  
-import twitter from "../assets/icons/twitter.png";  
+import twitter from "../assets/icons/twitter.png"; 
+import logo from "../assets/log-g.png";  
 
 
 
@@ -19,8 +20,7 @@ export default function Login() {
       </div>
 
       <div className="logo-box">
-        <div className="logo-placeholder">Logo</div>
-        <h1 className="brand">MEDCURE</h1>
+        <img src={logo} alt="logo" className="Medico" />
         <p className="mt-2 text-gray-700 font-medium text-sm">Your Health and Medicine Partner</p>
       </div>
 
