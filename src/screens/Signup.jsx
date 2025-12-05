@@ -17,8 +17,8 @@ export default function Signup(){
       </div>
 
       <div className='title'>
-        <h1 className='text-green-500'>Create New Account</h1>
-        <p className='text-gray-700 font-medium'>Enter your details to create account</p>
+        <h1 className='text-blue-500'>Create New Account</h1>
+        <p className='text-gray-700 font-medium text-md'>Enter your details to create account</p>
       </div>
 
       <form className='form'>

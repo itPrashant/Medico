@@ -28,8 +28,8 @@ const Products = () => {
 
   const categories = [
     { id: 1, name: "Medicines", icon: pills, redirect: "Pharmacy" },
-    { id: 2, name: "Ayurvedic", icon: herbal, redirect: "" },
-    { id: 3, name: "Baby Products", icon: babyproduct, redirect: "" },
+    { id: 2, name: "Ayurvedic", icon: herbal, redirect: "Ayurvedic" },
+    { id: 3, name: "Babycare", icon: babyproduct, redirect: "Babycare" },
     { id: 4, name: "Supplements", icon: supplement, redirect: "" },
   ];
 
@@ -97,9 +97,9 @@ const Products = () => {
       </div>
 
       {/* Categories */}
-      <div className="mt-6 mb-6">
-        <h2 className="mt-6 text-lg font-bold text-green-500">Top Categories</h2>
-        <p className="text-gray-700 text-sm font-medium mb-3">Get discounts & offers</p>
+      <div className="mt-6 mb-6" style={{marginTop: "50px"}}>
+        <h2 className="mt-6 text-lg font-bold text-blue-500">Top Categories</h2>
+        <p className="text-gray-700 text-sm font-medium mb-1">Get discounts & offers</p>
       </div>
       <div className="grid grid-cols-2 gap-4">
         {categories.map((cat) => (

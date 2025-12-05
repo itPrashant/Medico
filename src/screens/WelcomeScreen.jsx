@@ -11,14 +11,14 @@ export default function WelcomeScreen(){
         <img src={help} alt='help' />
       </div>
       <div className='welcome-top'>
-        <h3 className='text-green-500'>Need</h3>
-        <h1 className='text-green-500'>Medical Help?</h1>
-        <p className='text-gray-700 font-medium'>Let's start discussing with us!</p>
+        <h3 className='text-blue-500'>Need</h3>
+        <h1 className='text-blue-500'>Medical Help?</h1>
+        <p className='text-gray-700 font-medium text-md'>Let's start discussing with us!</p>
       </div>
 
     
-      <div className='welcome-bottom bg-green-500'>
-        <button className='primary bg-white text-green-500' onClick={()=>nav('/signup')}>Create an account</button>
+      <div className='welcome-bottom bg-blue-500'>
+        <button className='primary bg-white text-blue-500' onClick={()=>nav('/signup')}>Create an account</button>
         <button className='outline' onClick={()=>nav('/login')}>Sign In</button>
       </div>
     </div>

@@ -10,6 +10,8 @@ import Home from "./pages/Home/Home";
 import DoctorsList from "./pages/DoctorsList";
 import Pharmacy from "./pages/Pharmacy";
 import Products from "./pages/Products";
+import Ayurvedic from "./pages/Ayurvedic";
+import Babycare from "./pages/Babycare";
 
 // ❗ Correct imports — replace these with your actual component paths
 import BookAppointmentScreen from "./pages/BookAppointmentScreen";
@@ -62,17 +64,11 @@ export default function App() {
         <Route path="/products" element={<Products />} />
 
         {/* Booking Routes (correct mapping) */}
-        <Route
-          path="/book-appointment"
-          element={<BookAppointmentScreen />}
-        />
-
-        <Route
-          path="/appointment-confirmation"
-          element={<AppointmentConfirmation />}
-        />
-
+        <Route path="/book-appointment" element={<BookAppointmentScreen />}/>
+        <Route path="/appointment-confirmation" element={<AppointmentConfirmation />}/>
         <Route path="/appointments" element={<Appointments />} />
+        <Route path="/Ayurvedic" element={<Ayurvedic />}/>
+        <Route path="/Babycare" element={<Babycare />}/>
 
         {/* Keep 404 redirect LAST */}
         <Route path="*" element={<Navigate to="/home" replace />} />

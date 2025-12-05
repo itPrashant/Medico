@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { FiArrowLeft, FiBell, FiSearch, FiSliders } from "react-icons/fi";
 import { IoIosStar } from "react-icons/io";
 import BottomNav from "./Home/BottomNav";
-import hedoc from "../assets/hedoc.jpg";
-import shedoc from "../assets/shedoc.png";
+import hedoc from "../assets/docmale.jpg";
+import shedoc from "../assets/docfemale.jpg";
 import { useNavigate } from "react-router-dom";
 const doctors = [
   {
@@ -432,7 +432,7 @@ const DoctorsList = () => {
       <div className="flex items-center justify-between">
         <Link
           to="/Home"
-          className="h-10 w-10 bg-white rounded-xl shadow flex items-center justify-center"
+          className="h-10 w-10 bg-white rounded-xl text-blue-500 shadow flex items-center justify-center"
         >
           <FiArrowLeft size={22} />
         </Link>
@@ -454,7 +454,7 @@ const DoctorsList = () => {
           onChange={(e) => setSearch(e.target.value)}
           className="flex-1 outline-none text-xs bg-transparent"
         />
-        <div className="h-9 w-9 flex items-center justify-center bg-green-500 text-white rounded-xl shadow">
+        <div className="h-9 w-9 flex items-center justify-center bg-blue-500 text-white rounded-xl shadow">
           <FiSliders />
         </div>
       </div>
@@ -473,12 +473,12 @@ const DoctorsList = () => {
                 </div>
 
                 <div className="flex-1">
-                  <h2 className="font-semibold text-sm">{doc.name}</h2>
-                  <p className="text-xs text-gray-600 font-semibold mt-1">
+                  <h2 className="font-semibold text-sm text-gray-700">{doc.name}</h2>
+                  <p className="text-xs text-gray-600 font-medium mt-1">
                     {doc.speciality}
                   </p>
 
-                  <p className="text-xs text-gray-600 font-semibold mt-1">
+                  <p className="text-xs text-gray-600 mt-1">
                     {doc.state} - {doc.hospital}
                   </p>
 
@@ -486,23 +486,23 @@ const DoctorsList = () => {
                     <span>🕒 {doc.time}</span>
                   </div> */}
 
-                  <div className="flex items-center gap-4 mt-1 text-gray-600 text-xs font-semibold">
+                  <div className="flex items-center gap-4 mt-1 text-gray-600 text-xs">
                     
                     <span>{doc.exp} Experience</span>
                   </div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-1 bg-blue-500 px-2 py-1 rounded-full text-xs text-white" 
-              style={{position:"absolute",top:"10px",right:"10px"}}>
-                <IoIosStar /> {doc.rating}
+              <div className="flex items-center px-2 py-1 text-xs text-blue-500 text-semibold" 
+              style={{position:"absolute",top:"10px",right:"16px"}}>
+                <IoIosStar />  {doc.rating}
               </div>
 
               <div className="flex items-center justify-between mt-4">
-                <div className="flex items-center gap-1 text-xs font-semibold text-gray-600">
+                <div className="flex items-center gap-1 text-xs font-semibold text-blue-500">
                   <span>₹ {doc.price} - Consulting fees</span>
                 </div>
-                <button className="px-3 py-2 bg-green-500 text-white text-xs font-medium rounded-full shadow"
+                <button className="px-3 py-2 bg-blue-500 text-white text-xs font-medium rounded-full shadow"
                 onClick={() =>
                   navigate("/book-appointment", { state: { doctor: doc } })
                 }>

@@ -347,7 +347,7 @@ const Pharmacy = () => {
   const nav = useNavigate();
 
   return (
-    <div className="min-h-screen bg-[#f7faff] px-4 pt-6 pb-28">
+    <div className="min-h-screen bg-[#f7faff] px-4 pt-6 pb-24">
 
       {/* Header */}
       <div className="flex items-center justify-between">
@@ -393,14 +393,14 @@ const Pharmacy = () => {
               <p className="text-xs text-gray-500">10 Tablet(s) in Strip</p>
 
               <div className="flex items-center mt-1 gap-2">
-                <p className="text-green-600 font-bold text-sm">₹{p.price}</p>
+                <p className="text-blue-500 font-bold text-sm">₹{p.price}</p>
                 <p className="text-gray-400 line-through text-xs">MRP ₹{p.mrp}</p>
-                <p className="text-green-600 text-xs font-semibold">20% OFF</p>
+                <p className="text-blue-500 text-xs font-semibold">20% OFF</p>
               </div>
 
               <button
                 onClick={() => addToCart(p)}
-                className="mt-2 bg-green-600 text-white w-full py-1.5 rounded-xl text-sm"
+                className="mt-2 bg-blue-500 text-white w-full py-1.5 rounded-xl text-sm"
               >
                 Add to Cart
               </button>
@@ -422,7 +422,7 @@ const Pharmacy = () => {
                 <img src={item.image} className="w-12 h-12 rounded-lg" />
                 <div>
                   <p className="text-sm font-semibold">{item.name}</p>
-                  <p className="text-green-600 text-xs font-bold">
+                  <p className="text-blue-600 text-xs font-bold">
                     ₹ {item.price * item.qty}
                   </p>
                 </div>

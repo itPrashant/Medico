@@ -10,6 +10,6 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     border: 1px solid #0000001a;
 }
-.create{ padding:12px; border-radius:12px; border:none; background:var(--primary-color); color:#fff; margin-top:6px; }
+.create{ padding:12px; border-radius:12px; border:none; background: #2b7fff; color:#fff; margin-top:6px; }
 .social{ text-align:center; margin-top:16px; }
 .footer{ text-align:center; margin-top:14px; }

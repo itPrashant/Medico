@@ -7,9 +7,7 @@
     margin: 0px 12px!important;
 
 }
-input {
-  font-size: 16px !important;
-}
+
 
 /* .slick-dots li.slick-active button:before {
     background: black;
@@ -26,15 +24,15 @@ input {
     height: 0;
 }
 .slick-dots li button{
-    height: 6px;
+    height: 4px;
     width: 6px;
     border-radius: 50%;
-    background: green;
+    background: #2b7fff;
 }
 .slick-dots li.slick-active button{
-    background: green;
-    height: 6px;
-    width: 20px;
+    background: #2b7fff;
+    height: 4px;
+    width: 18px;
     border-radius: 5px;
 }
 

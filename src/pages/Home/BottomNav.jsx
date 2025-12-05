@@ -28,7 +28,7 @@ export default function BottomNav() {
           >
             <div
               className={`flex flex-col items-center transition-all duration-200 ${
-                active === item.id ? "text-[#02901c]" : "text-gray-700"
+                active === item.id ? "text-[#2b7fff]" : "text-gray-700"
               }`}
             >
               <div

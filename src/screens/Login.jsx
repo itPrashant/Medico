@@ -21,7 +21,7 @@ export default function Login() {
 
       <div className="logo-box">
         <img src={logo} alt="logo" className="Medico" />
-        <p className="mt-2 text-gray-700 font-medium text-sm">Your Health and Medicine Partner</p>
+        <p className="mt-2 text-gray-700 font-medium text-md">Your Health and Medicine Partner</p>
       </div>
 
       <form className="form">

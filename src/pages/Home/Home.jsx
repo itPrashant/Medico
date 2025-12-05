@@ -6,13 +6,14 @@ import BannerCard from "./BannerCard";
 import DoctorCard from "./DoctorCard";
 import BottomNav from "./BottomNav";
 import { Navigate, useNavigate } from "react-router-dom";
-import doc from '../../assets/hedoc.jpg'
+import doc from '../../assets/docmale.jpg'
+import fedoc from '../../assets/docfemale.jpg'
 
 export default function Home() {
   const doctors = [
     {
       id: 1,
-      name: "Dr. Roboto Kale",
+      name: "Dr. Prashant Sisodia",
       spec: "Heart Surgeon",
       hospital: "Apollo Hospital",
       rating: 4.9,
@@ -20,27 +21,11 @@ export default function Home() {
     },
     {
       id: 2,
-      name: "Dr. Lily Rozar",
+      name: "Dr. Meghna Tiwari",
       spec: "Neurologist",
       hospital: "VSG Hospital",
       rating: 4.8,
-      img: doc,
-    },
-    {
-      id: 3,
-      name: "Dr. Lily Rozar",
-      spec: "Dantist",
-      hospital: "VSG Hospital",
-      rating: 4.8,
-      img: doc,
-    },
-    {
-      id: 4,
-      name: "Dr. Lily Rozar",
-      spec: "Orthopedic",
-      hospital: "VSG Hospital",
-      rating: 4.8,
-      img: doc,
+      img: fedoc,
     },
   ];
 
