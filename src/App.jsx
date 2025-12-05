@@ -19,6 +19,7 @@ import AppointmentConfirmation from "./pages/AppointmentConfirmation";
 import Appointments from "./pages/Appointments";
 
 import "./index.css";
+import CartPage from "./pages/Home/CartPage";
 
 export default function App() {
   useEffect(() => {
@@ -54,7 +55,8 @@ export default function App() {
         <Route path="/welcome" element={<WelcomeScreen />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-
+        {/* // In your App.js or routing file */}
+        <Route path="/cart" element={<CartPage />} />
         {/* Main Screens */}
         <Route path="/home" element={<Home />} />
         <Route path="/doctorsList" element={<DoctorsList />} />
@@ -64,11 +66,14 @@ export default function App() {
         <Route path="/products" element={<Products />} />
 
         {/* Booking Routes (correct mapping) */}
-        <Route path="/book-appointment" element={<BookAppointmentScreen />}/>
-        <Route path="/appointment-confirmation" element={<AppointmentConfirmation />}/>
+        <Route path="/book-appointment" element={<BookAppointmentScreen />} />
+        <Route
+          path="/appointment-confirmation"
+          element={<AppointmentConfirmation />}
+        />
         <Route path="/appointments" element={<Appointments />} />
-        <Route path="/Ayurvedic" element={<Ayurvedic />}/>
-        <Route path="/Babycare" element={<Babycare />}/>
+        <Route path="/Ayurvedic" element={<Ayurvedic />} />
+        <Route path="/Babycare" element={<Babycare />} />
 
         {/* Keep 404 redirect LAST */}
         <Route path="*" element={<Navigate to="/home" replace />} />
