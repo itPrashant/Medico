@@ -26,4 +26,4 @@ export default function DoctorCard({ doctor }) {
       </div>
     </div>
   );
-}
+};

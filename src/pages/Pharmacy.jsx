@@ -14,15 +14,52 @@ import pills from "../assets/icons/pills.png";
 const Pharmacy = () => {
   const [cart, setCart] = useState([]);
 
+  // Updated addToCart function for both Ayurvedic.js and Pharmacy.js
   const addToCart = (product) => {
-    const exists = cart.find((p) => p.id === product.id);
-    if (exists) {
-      setCart(
-        cart.map((p) => (p.id === product.id ? { ...p, qty: p.qty + 1 } : p))
-      );
+    // First, load existing cart from localStorage
+    const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Check if product already exists in cart
+    const existingItemIndex = existingCart.findIndex(
+      (item) => item.id === product.id
+    );
+
+    let updatedCart;
+
+    if (existingItemIndex !== -1) {
+      // Update quantity if product exists
+      updatedCart = [...existingCart];
+      updatedCart[existingItemIndex] = {
+        ...updatedCart[existingItemIndex],
+        qty: (updatedCart[existingItemIndex].qty || 1) + 1,
+      };
     } else {
-      setCart([...cart, { ...product, qty: 1 }]);
+      // Add new product to cart
+      updatedCart = [
+        ...existingCart,
+        {
+          ...product,
+          qty: 1,
+          // Ensure all required fields are included
+          price: parseFloat(product.price) || 0,
+          image:
+            product.image || product.img || "https://via.placeholder.com/80x80",
+          packoff: product.packoff || product.brand || "Standard Pack",
+        },
+      ];
     }
+
+    // Save updated cart to localStorage
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
+
+    // Update local state for floating cart bar
+    setCart(updatedCart);
+
+    // Trigger cart update event for CartPage
+    window.dispatchEvent(new Event("cartUpdated"));
+
+    // Show success message
+    // alert(`${product.name} added to cart!`);
   };
 
   const [search, setSearch] = useState("");
@@ -342,7 +379,7 @@ const Pharmacy = () => {
     slidesToScroll: 1,
   };
 
-  const nav = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-[#f7faff] px-4 pt-6 pb-24">
@@ -454,8 +491,13 @@ const Pharmacy = () => {
           {/* Checkout / Cart Button */}
           {/* // In both Ayurvedic.js and Pharmacy.js, replace the "Go to Cart" button: */}
           <button
-            onClick={() => nav("/cart")}
-            className="w-full bg-blue-500 text-white py-3 rounded-xl font-semibold text-sm"
+            onClick={() => {
+              // Ensure cart is saved before navigating
+              localStorage.setItem("cart", JSON.stringify(cart));
+              window.dispatchEvent(new Event("cartUpdated"));
+              navigate("/cart");
+            }}
+            className="w-full bg-blue-500 text-white py-3 rounded-xl font-semibold text-sm shadow-lg hover:bg-blue-600 transition"
           >
             Go to Cart ({cart.length} items)
           </button>

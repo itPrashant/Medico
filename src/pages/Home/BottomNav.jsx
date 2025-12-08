@@ -8,7 +8,7 @@ export default function BottomNav() {
   const navItems = [
     { id: "home", icon: <FiHome size={20} />, label: "Home", to: "/" },
     { id: "appointments", icon: <FiCalendar size={20} />, label: "Appointments", to: "/appointments" },
-    { id: "orders", icon: <FiShoppingBag size={20} />, label: "Orders", to: "/orders" },
+    { id: "orders", icon: <FiShoppingBag size={20} />, label: "Orders", to: "/cart" },
     { id: "profile", icon: <FiUser size={20} />, label: "Profile", to: "/profile" },
   ];
 
@@ -49,4 +49,4 @@ export default function BottomNav() {
       </div>
     </div>
   );
-}
+};

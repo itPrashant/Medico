@@ -279,7 +279,7 @@ export default function BookAppointmentScreen() {
           disabled={!selectedTime}
           className={`w-full py-4 rounded-xl font-semibold text-white shadow-lg transition-all duration-300 ${
             selectedTime
-              ? "bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 hover:shadow-xl active:scale-95"
+              ? "bg-linear-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 hover:shadow-xl active:scale-95"
               : "bg-gray-300 cursor-not-allowed"
           }`}
         >
@@ -301,4 +301,4 @@ export default function BookAppointmentScreen() {
       </div>
     </div>
   );
-}
+};

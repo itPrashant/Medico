@@ -50,7 +50,7 @@ export default function Appointments() {
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white px-4 pt-6 pb-24">
+      <div className="min-h-screen bg-linear-to-b from-blue-50 to-white px-4 pt-6 pb-24">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <button
@@ -138,7 +138,7 @@ export default function Appointments() {
                   className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                 >
                   {/* Appointment Header */}
-                  <div className="bg-gradient-to-r from-blue-50 to-white p-4">
+                  <div className="bg-linear-to-r from-blue-50 to-white p-4">
                     <div className="flex justify-between items-start">
                       <div>
                         <div className="flex items-center gap-2 mb-1">
@@ -243,7 +243,7 @@ export default function Appointments() {
           <div className="fixed bottom-20 left-4 right-4">
             <button
               onClick={() => navigate("/doctorslist")}
-              className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition"
+              className="w-full bg-linear-to-r from-blue-500 to-blue-600 text-white py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition"
             >
               Book New Appointment
             </button>

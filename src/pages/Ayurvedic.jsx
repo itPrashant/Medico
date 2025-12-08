@@ -15,40 +15,45 @@ const Ayurvedic = () => {
   const [cart, setCart] = useState([]);
 
   // Update the addToCart function:
+// Updated addToCart function for both Ayurvedic.js and Pharmacy.js
 const addToCart = (product) => {
-  const exists = cart.find((p) => p.id === product.id);
+  const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
+  const existingItemIndex = existingCart.findIndex(item => item.id === product.id);
   let updatedCart;
-  
-  if (exists) {
-    updatedCart = cart.map((p) =>
-      p.id === product.id ? { ...p, qty: p.qty + 1 } : p
-    );
+  if (existingItemIndex !== -1) {
+    // Update quantity if product exists
+    updatedCart = [...existingCart];
+    updatedCart[existingItemIndex] = {
+      ...updatedCart[existingItemIndex],
+      qty: (updatedCart[existingItemIndex].qty || 1) + 1
+    };
   } else {
-    updatedCart = [...cart, { ...product, qty: 1 }];
+    // Add new product to cart
+    updatedCart = [...existingCart, {
+      ...product,
+      qty: 1,
+      // Ensure all required fields are included
+      price: parseFloat(product.price) || 0,
+      image: product.image || product.img || "https://via.placeholder.com/80x80",
+      packoff: product.packoff || product.brand || "Standard Pack"
+    }];
   }
   
-  setCart(updatedCart);
-  
-  // Save to localStorage with the key "cart"
+  // Save updated cart to localStorage
   localStorage.setItem("cart", JSON.stringify(updatedCart));
-  
-  // Also save to "shoppingCart" for compatibility
-  localStorage.setItem("shoppingCart", JSON.stringify(updatedCart));
-  
-  // Trigger custom event for CartPage to listen to
+  setCart(updatedCart);
   window.dispatchEvent(new Event("cartUpdated"));
 };
 
 // Update the "Go to Cart" button:
 <button 
   onClick={() => {
-    // Save cart before navigating
+    // Ensure cart is saved before navigating
     localStorage.setItem("cart", JSON.stringify(cart));
-    localStorage.setItem("shoppingCart", JSON.stringify(cart));
     window.dispatchEvent(new Event("cartUpdated"));
     navigate("/cart");
   }}
-  className="w-full bg-blue-500 text-white py-3 rounded-xl font-semibold text-sm"
+  className="w-full bg-blue-500 text-white py-3 rounded-xl font-semibold text-sm shadow-lg hover:bg-blue-600 transition"
 >
   Go to Cart ({cart.length} items)
 </button>
@@ -324,7 +329,7 @@ const addToCart = (product) => {
     slidesToScroll: 1,
   };
 
-  const nav = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <>
@@ -355,7 +360,7 @@ const addToCart = (product) => {
             onChange={(e) => setSearch(e.target.value)}
             className="flex-1 outline-none text-xs bg-transparent"
           />
-          <div className="h-9 w-9 flex items-center justify-center bg-green-500 text-white rounded-xl shadow">
+          <div className="h-9 w-9 flex items-center justify-center bg-blue-500 text-white rounded-xl shadow">
             <FiSliders />
           </div>
         </div>

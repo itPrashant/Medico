@@ -34,7 +34,7 @@ export default function AppointmentConfirmation() {
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white px-4 pt-6 pb-24">
+      <div className="min-h-screen bg-linear-to-b from-blue-50 to-white px-4 pt-6 pb-24">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
           <button
@@ -53,7 +53,7 @@ export default function AppointmentConfirmation() {
         {/* Success Icon */}
         <div className="flex flex-col items-center mb-8">
           <div className="relative">
-            <div className="h-32 w-32 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center shadow-lg">
+            <div className="h-32 w-32 bg-linear-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center shadow-lg">
               <FiCheckCircle size={60} className="text-white" />
             </div>
             <div className="absolute -bottom-2 -right-2 h-10 w-10 bg-white rounded-full flex items-center justify-center shadow">
@@ -69,7 +69,7 @@ export default function AppointmentConfirmation() {
         {/* Appointment Details Card */}
         <div className="bg-white rounded-2xl shadow-xl mb-6 overflow-hidden">
           {/* Card Header */}
-          <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-4">
+          <div className="bg-linear-to-r from-blue-500 to-blue-600 p-4">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-white text-xs font-medium">APPOINTMENT ID</p>
@@ -141,7 +141,7 @@ export default function AppointmentConfirmation() {
           {/* Important Note */}
           <div className="bg-yellow-50 border-t border-yellow-100 p-4">
             <div className="flex items-start gap-2">
-              <div className="h-5 w-5 rounded-full bg-yellow-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <div className="h-5 w-5 rounded-full bg-yellow-100 flex items-center justify-center shrink-0 mt-0.5">
                 <span className="text-yellow-600 text-xs font-bold">!</span>
               </div>
               <div>
@@ -164,7 +164,7 @@ export default function AppointmentConfirmation() {
           </button>
           <button
             onClick={handleConfirm}
-            className="flex-1 bg-gradient-to-r from-green-500 to-green-600 text-white py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl hover:from-green-600 hover:to-green-700 transition active:scale-95"
+            className="flex-1 bg-linear-to-r from-green-500 to-green-600 text-white py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl hover:from-green-600 hover:to-green-700 transition active:scale-95"
           >
             Confirm Appointment
           </button>
@@ -175,7 +175,7 @@ export default function AppointmentConfirmation() {
           <h4 className="font-semibold text-gray-800 mb-2">What happens next?</h4>
           <div className="space-y-3">
             <div className="flex items-start gap-2">
-              <div className="h-5 w-5 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <div className="h-5 w-5 rounded-full bg-blue-100 flex items-center justify-center shrink-0 mt-0.5">
                 <span className="text-blue-600 text-xs font-bold">1</span>
               </div>
               <p className="text-sm text-gray-600">
@@ -183,7 +183,7 @@ export default function AppointmentConfirmation() {
               </p>
             </div>
             <div className="flex items-start gap-2">
-              <div className="h-5 w-5 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <div className="h-5 w-5 rounded-full bg-blue-100 flex items-center justify-center shrink-0 mt-0.5">
                 <span className="text-blue-600 text-xs font-bold">2</span>
               </div>
               <p className="text-sm text-gray-600">
@@ -191,7 +191,7 @@ export default function AppointmentConfirmation() {
               </p>
             </div>
             <div className="flex items-start gap-2">
-              <div className="h-5 w-5 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <div className="h-5 w-5 rounded-full bg-blue-100 flex items-center justify-center shrink-0 mt-0.5">
                 <span className="text-blue-600 text-xs font-bold">3</span>
               </div>
               <p className="text-sm text-gray-600">
@@ -204,4 +204,4 @@ export default function AppointmentConfirmation() {
       <BottomNav />
     </>
   );
-}
+};
